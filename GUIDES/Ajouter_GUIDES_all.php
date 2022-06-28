@@ -1,5 +1,5 @@
 <?php
-    require 'connexion.php';
+     include('connexion.php');s
     
 
     $id=$_GET['id'];
