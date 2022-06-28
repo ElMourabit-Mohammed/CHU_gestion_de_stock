@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <?php
-            require 'connexion.php';
+            include('connexion.php');
             $requete_sondes_5f="SELECT * from sondes_5f where S5F_Quantite<20";
             $query_sondes_5f=mysqli_query($con,$requete_sondes_5f);
 

@@ -14,7 +14,7 @@
         <hr>
     </div>
     <!-- sondes_5f TABLE -->
-    <h1 class="type">Sondes 5F</h1>
+    <h1 class="type">Sondes 5FFFFFFFFFFFF</h1>
     <table class="content-table">
         <thead>
             <tr>
@@ -27,7 +27,7 @@
             </tr>
         </thead>
         <?php
-            require 'connexion.php';
+            include('connexion.php');
             $requete_sondes_5f="SELECT * from sondes_5f";
             $query_sondes_5f=mysqli_query($con,$requete_sondes_5f);
 
