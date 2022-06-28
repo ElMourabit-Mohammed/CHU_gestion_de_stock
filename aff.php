@@ -15,7 +15,6 @@
     </div>
     <!-- sondes_5f TABLE -->
     <!--hello-->
-    <!--Othmane Aghbal-->
     <h1 class="type">Sondes 5F</h1>
     <table class="content-table">
         <thead>
