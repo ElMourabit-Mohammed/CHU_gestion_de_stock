@@ -11,6 +11,11 @@
     text-align: center;
   }
 
+  .prod_moins20{
+    text-decoration: none;
+    font-size: medium;
+    color:red;
+  }
 
   .content-table {
     width: 80%;
