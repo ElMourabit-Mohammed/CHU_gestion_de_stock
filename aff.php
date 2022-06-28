@@ -10,11 +10,10 @@
 <body>
     <div class="top_content">
         <h1>Page des produits et contrôle de stock</h1>
-        <a href="alert.php">Produits de moins de 20</a>
+        <a class="prod_moins20" href="alert.php">Produits de moins de 20</a>
         <hr>
     </div>
     <!-- sondes_5f TABLE -->
-    <!--hello-->
     <h1 class="type">Sondes 5F</h1>
     <table class="content-table">
         <thead>
