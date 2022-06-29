@@ -5,25 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page des produits et contrôle de stock</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9c0bf29922.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
     <div class="top_content">
         <h1>Page des produits et contrôle de stock</h1>
-        <a class="prod_moins20" href="alert.php">Produits de moins de 20</a>
-        <hr>
+        <a class="prod-20" href="alert.php"> <img class="icon" src="alert.png"> Produits de moins de 20</img></a>
     </div>
+    <hr>
     <!-- sondes_5f TABLE -->
-    <h1 class="type">Sondes 5FFFFFFFFFFFF</h1>
+    <h1 class="type" id="t1">Sondes 5F</h1>
     <table class="content-table">
         <thead>
             <tr>
                 <th>S5F_TYPES</th>
                 <th>S5F_Quantite</th>
-                <th> <a href='./sondes_5f/Diminuer_sondes_5f_all.php?id=".$id."'>Diminuer De Produit</a> </th>
-                <!-- <th>Diminuer De Produit</th> -->
-                <th> <a href='./sondes_5f/Ajouter_sondes_5f_all.php?id=".$id."'>Ajouter De Produit</a> </th>
-                <!-- <th>Ajouter De Produit</th> -->
+                <th> <a href='./sondes_5f/Diminuer_sondes_5f_all.php?id=".$id."'>Décrementer tout les sondes 5F</a> </th>
+                <!-- <th>Diminuer tout les Produits</th> -->
+                <th> <a href='./sondes_5f/Ajouter_sondes_5f_all.php?id=".$id."'>Incrémenter tout les sondes 5F</a> </th>
+                <!-- <th>Ajouter a tout les  Produits</th> -->
             </tr>
         </thead>
         <?php
@@ -56,9 +57,9 @@
             <tr>
                 <th>S6F_TYPES</th>
                 <th>S6F_Quantite</th>
-                <th> <a href='./sondes_6f/Diminuer_sondes_6f_all.php?id=".$id."'>Diminuer De Produit</a> </th>
+                <th> <a href='./sondes_6f/Diminuer_sondes_6f_all.php?id=".$id."'>Décrementer tout les sondes 6F</a> </th>
                 <!-- <th>Diminuer De Produit</th> -->
-                <th> <a href='./sondes_6f/Ajouter_sondes_6f_all.php?id=".$id."'>Ajouter De Produit</a> </th>
+                <th> <a href='./sondes_6f/Ajouter_sondes_6f_all.php?id=".$id."'>Incrémenter tout les sondes 6F</a> </th>
                 <!-- <th>Ajouter De Produit</th> -->
             </tr>
         </thead>
@@ -90,10 +91,10 @@
         <thead>
             <tr>
                 <th>Introducteurs_TYPES</th>
-                <th>Introducteurs_Quantite</th>
-                <th> <a href='./Introducteurs/Diminuer_Introducteurs_all.php?id=".$id."'>Diminuer De Produit</a> </th>
+                <th>c_Quantite</th>
+                <th> <a href='./Introducteurs/Diminuer_Introducteurs_all.php?id=".$id."'>Décrementer tout les introducteurs</a> </th>
                 <!-- <th>Diminuer De Produit</th> -->
-                <th> <a href='./Introducteurs/Ajouter_Introducteurs_all.php?id=".$id."'>Ajouter De Produit</a> </th>
+                <th> <a href='./Introducteurs/Ajouter_Introducteurs_all.php?id=".$id."'>Incrémenter tout les introducteurs</a> </th>
                 <!-- <th>Ajouter De Produit</th> -->
             </tr>
         </thead>
@@ -127,9 +128,9 @@
                 <th>GUIDES</th>
                 <th>GUIDES_TYPES</th>
                 <th>GUIDES_Quantite</th>
-                <th> <a href='./GUIDES/Diminuer_GUIDES_all.php?id=".$id."'>Diminuer De Produit</a> </th>
+                <th> <a href='./GUIDES/Diminuer_GUIDES_all.php?id=".$id."'>Décrementer tout les guides</a> </th>
                 <!-- <th>Diminuer De Produit</th> -->
-                <th> <a href='./GUIDES/Ajouter_GUIDES_all.php?id=".$id."'>Ajouter De Produit</a> </th>
+                <th> <a href='./GUIDES/Ajouter_GUIDES_all.php?id=".$id."'>Incrémenter tout les guides</a> </th>
                 <!-- <th>Ajouter De Produit</th> -->
             </tr>
         </thead>
@@ -163,9 +164,9 @@
             <tr>
                 <th>PM_TYPES</th>
                 <th>PM_Quantite</th>
-                <th> <a href='./PM/Diminuer_PM_all.php?id=".$id."'>Diminuer De Produit</a> </th>
+                <th> <a href='./PM/Diminuer_PM_all.php?id=".$id."'>Décrementer tout les PM</a> </th>
                 <!-- <th>Diminuer De Produit</th> -->
-                <th> <a href='./PM/Ajouter_PM_all.php?id=".$id."'>Ajouter De Produit</a> </th>
+                <th> <a href='./PM/Ajouter_PM_all.php?id=".$id."'>Incrémenter tout les PM</a> </th>
                 <!-- <th>Ajouter De Produit</th> -->
             </tr>
         </thead>
@@ -197,9 +198,9 @@
             <tr>
                 <th>AUTRE_TYPES</th>
                 <th>AUTRE_TYPES_Quantite</th>
-                <th> <a href='./AUTRE_TYPES/Diminuer_AUTRE_TYPES_all.php?id=".$id."'>Diminuer De Produit</a> </th>
+                <th> <a href='./AUTRE_TYPES/Diminuer_AUTRE_TYPES_all.php?id=".$id."'>Décrementer tout les autres types</a> </th>
                 <!-- <th>Diminuer De Produit</th> -->
-                <th> <a href='./AUTRE_TYPES/Ajouter_AUTRE_TYPES_all.php?id=".$id."'>Ajouter De Produit</a> </th>
+                <th> <a href='./AUTRE_TYPES/Ajouter_AUTRE_TYPES_all.php?id=".$id."'>Incrémenter tout les autres types</a> </th>
                 <!-- <th>Ajouter De Produit</th> -->
             </tr>
         </thead>

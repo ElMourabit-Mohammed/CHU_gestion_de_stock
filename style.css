@@ -1,26 +1,72 @@
 
 * {
-    font-family: sans-serif; /* Change your font family */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Change your font family */
     margin: 0;
     padding: 0;
   }
   
   .type{
-    color: #009879;
+    color: #010605;
     font-size: 45px;
     text-align: center;
+    margin-top:-30px;
+    margin-bottom:30px;
   }
 
-  .prod_moins20{
+  #t1{
+    margin-top:20px;
+  }
+
+
+  .icon{
+    height:20px;
+    width:23px;
+    margin-top:2px;
+    margin-right:8px;
+  }
+
+
+
+  .prod-20:link {
+    font-size:larger;
+    margin:8px 0px 0px 5px;
+ 
+    
+  }
+
+  .prod-20:hover{
+    color:rgb(238, 0, 0);
+    font-weight:bolder;
+  }
+
+  .icon,.prod-20{
+    display: inline-flex;
+  }
+  
+
+
+  .top_content{
+    padding:10px 30px ;
+  }
+
+  a:link{
     text-decoration: none;
-    font-size: medium;
-    color:red;
+    color:#010605;
+  }
+
+  a:hover{
+    font-weight: bold;
+    color:#010605;
+  }
+
+  a:visited{
+    color:black;
   }
 
   .content-table {
     width: 80%;
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 25px 150px;
     font-size: 15px;
     font-weight: 700;
     min-width: 400px;
@@ -41,6 +87,16 @@
     padding: 12px 15px;
   }
   
+  .content-table th a{
+    color: #ffffff;
+    text-align:left;
+  }
+
+  .content-table th a:hover{
+    color: #79e0ce;
+    font-weight: bold;
+  }
+
   .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
   }

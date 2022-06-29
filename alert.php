@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produits de moins de 20</title>
+    <script src="https://kit.fontawesome.com/9c0bf29922.js" crossorigin="anonymous"></script>
+    <title>Produits moins de 20</title>
     <link rel="stylesheet" href="./stylealert.css">
 </head>
 <body>
-    <h1>Produits de moins de 20</h1><hr>
+
+    <h1 class="top-title"> <a href="./aff.php"> <i class='fas fa-arrow-alt-circle-left'></i></a> Produits moins de 20 unitées</h1><hr>
     <!-- sondes_5f TABLE -->
-    <h1 class="type">Sondes 5F</h1>
+    <h1 class="type" id="t1">Sondes 5F</h1>
     <table class="content-table">
         <thead>
             <tr>
@@ -49,8 +51,8 @@
             </tr>
         </thead>
         <?php
-            require 'connexion.php';
-            $requete_sondes_6f="SELECT * from sondes_6f where S6F_Quantite<20";
+            include('connexion.php');
+            $requete_sondes_6f="SELECT * from sondes_6f where S6F_Quantite < 20";
             $query_sondes_6f=mysqli_query($con,$requete_sondes_6f);
 
             while($rows=mysqli_fetch_assoc($query_sondes_6f)){
@@ -78,7 +80,7 @@
             </tr>
         </thead>
         <?php
-            require 'connexion.php';
+            include('connexion.php');
             $requete_introducteurs="SELECT * from introducteurs where Introducteurs_Quantite<20";
             $query_introducteurs=mysqli_query($con,$requete_introducteurs);
 
@@ -108,7 +110,7 @@
             </tr>
         </thead>
         <?php
-            require 'connexion.php';
+             include('connexion.php');
             $requete_guides="SELECT * from guides where GUIDES_Quantite<20";
             $query_guides=mysqli_query($con,$requete_guides);
 
@@ -138,7 +140,7 @@
             </tr>
         </thead>
         <?php
-            require 'connexion.php';
+             include('connexion.php');
             $requete_pm="SELECT * from pm where PM_Quantite<20";
             $query_pm=mysqli_query($con,$requete_pm);
 
@@ -166,7 +168,7 @@
             </tr>
         </thead>
         <?php
-            require 'connexion.php';
+           include('connexion.php');
             $requete_autre_materiels="SELECT * from autre_materiels where AUTRE_TYPES_Quantite<20";
             $query_autre_materiels=mysqli_query($con,$requete_autre_materiels);
 

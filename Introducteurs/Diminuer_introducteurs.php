@@ -1,6 +1,5 @@
 <?php
-    include('connexion.php');
-
+include('../connexion.php');
     $id=$_GET['id'];
 
     $sql="UPDATE introducteurs set Introducteurs_Quantite = Introducteurs_Quantite-1 where id='$id'";
