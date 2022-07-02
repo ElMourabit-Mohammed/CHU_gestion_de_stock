@@ -3,7 +3,7 @@ include('../connexion.php');
 
     $id=$_GET['id'];
 
-    $sql="UPDATE sondes_5f set S5F_Quantite = S5F_Quantite-1 where id='$id'";
+    $sql="UPDATE sondes_5f set S5F_Quantite = S5F_Quantite-1  where id='$id' and S5F_Quantite>=0";
 
     //pour l'execution
     $query=mysqli_query($con,$sql);

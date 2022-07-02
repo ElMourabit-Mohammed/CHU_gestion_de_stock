@@ -2,7 +2,7 @@
 include('../connexion.php');
     $id=$_GET['id'];
 
-    $sql="UPDATE introducteurs set Introducteurs_Quantite = Introducteurs_Quantite-1 where id='$id'";
+    $sql="UPDATE introducteurs set Introducteurs_Quantite = Introducteurs_Quantite-1 where id='$id' and Introducteurs_Quantite>=0";
 
     //pour l'execution
     $query=mysqli_query($con,$sql);

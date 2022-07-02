@@ -4,6 +4,12 @@
     margin: 0;
     padding: 0;
   }
+
+
+  #t1{
+    margin-top:20px;
+  }
+
   
   .type{
     color: #010605;
@@ -11,10 +17,6 @@
     text-align: center;
     margin-top:-30px;
     margin-bottom:30px;
-  }
-
-  #t1{
-    margin-top:20px;
   }
 
 
@@ -78,18 +80,19 @@
   .content-table thead tr {
     background-color: #009879;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
   }
   
   .content-table th,
   .content-table td {
     padding: 12px 15px;
+    text-align: center;
   }
   
   .content-table th a{
     color: #ffffff;
-    text-align:left;
+    text-align:center;
   }
 
   .content-table th a:hover{

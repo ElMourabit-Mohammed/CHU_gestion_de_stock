@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page des produits et contrôle de stock</title>
     <script src="https://kit.fontawesome.com/9c0bf29922.js" crossorigin="anonymous"></script>
-    <title>Produits moins de 20</title>
-    <link rel="stylesheet" href="./Stylealert.css">
-    
+    <link rel="stylesheet" href="Stylealert.css">
+
     <script>
         document.addEventListener("DOMContentLoaded", function(event) { 
             var scrollpos = localStorage.getItem('scrollpos');
@@ -18,18 +18,20 @@
             localStorage.setItem('scrollpos', window.scrollY);
         };
     </script>
-
+    
 </head>
 <body>
+    <h1 class="top-title"> <a href="./alert.php"> <i class='fas fa-arrow-alt-circle-left'></i></a> Produits moins de 20 unitées</h1>
+    <hr>
+    <hr>
 
-    <h1 class="top-title"> <a href="./aff.php"> <i class='fas fa-arrow-alt-circle-left'></i></a> Produits moins de 20 unitées</h1><hr>
 
-    <!--Rechercher les médicaments-->
-    <form method="post" action="rechercheMed-20.php" style="margin:40px 0px 0px 32%; ">
+    <form method="post" action="rechercheMed.php" style="margin:40px 0px 0px 32%; ">
         <input type="text" size="70" name="RechercheMed" id="t" placeholder="Rechercher Médicament " style="padding: 10px 20px ;border:none; border-radius:20px; background-color:#e7e7ee" >
          <button type="submit" id="p" style="border:none;margin-left:-40px; background-color:#e7e7ee;" ><i class="fa fa-search" style="font-size:15px"></i> </button>   
     </form>
     <br>
+
 
     <!-- sondes_5f TABLE -->
     <h1 class="type" id="t1">Sondes 5F</h1>
@@ -46,7 +48,8 @@
         </thead>
         <?php
             include('connexion.php');
-            $requete_sondes_5f="SELECT * from sondes_5f where S5F_Quantite<20";
+            $med=$_POST['RechercheMed'];
+            $requete_sondes_5f="SELECT * from sondes_5f where S5F_TYPES like '".$med."%' AND S5F_Quantite<20 ";
             $query_sondes_5f=mysqli_query($con,$requete_sondes_5f);
 
             while($rows=mysqli_fetch_assoc($query_sondes_5f)){
@@ -62,6 +65,7 @@
             }
         ?>
     </table>
+
 
 
     <br>
@@ -81,13 +85,14 @@
             </tr>
         </thead>
         <?php
-            include('connexion.php');
-            $requete_sondes_6f="SELECT * from sondes_6f where S6F_Quantite < 20";
+            require 'connexion.php';
+            $med=$_POST['RechercheMed'];
+            $requete_sondes_6f="SELECT * from sondes_6f where S6F_TYPES like '".$med."%' ";
             $query_sondes_6f=mysqli_query($con,$requete_sondes_6f);
 
             while($rows=mysqli_fetch_assoc($query_sondes_6f)){
                 //for delete
-                    $id=$rows['S6F_TYPES'];
+                    $id=$rows['id'];
                 //**** */
                 echo "<tr>";
                     echo "<td>".$rows['S6F_TYPES']."</td>";
@@ -108,7 +113,7 @@
         <thead>
             <tr>
                 <th>Introducteurs_TYPES</th>
-                <th>Introducteurs_Quantite</th>
+                <th>c_Quantite</th>
                 <th> <a href='./Introducteurs/Diminuer_Introducteurs_all.php?id=".$id."'>Décrementer tout les introducteurs</a> </th>
                 <!-- <th>Diminuer De Produit</th> -->
                 <th> <a href='./Introducteurs/Ajouter_Introducteurs_all.php?id=".$id."'>Incrémenter tout les introducteurs</a> </th>
@@ -116,13 +121,14 @@
             </tr>
         </thead>
         <?php
-            include('connexion.php');
-            $requete_introducteurs="SELECT * from introducteurs where Introducteurs_Quantite<20";
+            require 'connexion.php';
+            $med=$_POST['RechercheMed'];
+            $requete_introducteurs="SELECT * from introducteurs WHERE Introducteurs_TYPES like '".$med."%' ";
             $query_introducteurs=mysqli_query($con,$requete_introducteurs);
 
             while($rows=mysqli_fetch_assoc($query_introducteurs)){
                 //for delete
-                    $id=$rows['Introducteurs_TYPES'];
+                    $id=$rows['id'];
                 //**** */
                 echo "<tr>";
                     echo "<td>".$rows['Introducteurs_TYPES']."</td>";
@@ -130,7 +136,7 @@
                     echo "<td><a href='./Introducteurs/Diminuer_introducteurs.php?id=".$id."'>Supprimer</a></td>";
                     echo "<td><a href='./Introducteurs/Ajouter_introducteurs.php?id=".$id."'>Ajouter</a></td>";
                 echo "</tr>";
-            }            
+            }
         ?>
     </table>
 
@@ -152,13 +158,14 @@
             </tr>
         </thead>
         <?php
-             include('connexion.php');
-            $requete_guides="SELECT * from guides where GUIDES_Quantite<20";
+            require 'connexion.php';
+            $med=$_POST['RechercheMed'];
+            $requete_guides="SELECT * from guides  WHERE CONCAT(GUIDES,' ',GUIDES_TYPES) like '".$med."%' OR GUIDES_TYPES like '".$med."%'";
             $query_guides=mysqli_query($con,$requete_guides);
 
             while($rows=mysqli_fetch_assoc($query_guides)){
                 //for delete
-                    $id=$rows['GUIDES'];
+                    $id=$rows['id'];
                 //**** */
                 echo "<tr>";
                     echo "<td>".$rows['GUIDES']."</td>";
@@ -188,13 +195,14 @@
             </tr>
         </thead>
         <?php
-             include('connexion.php');
-            $requete_pm="SELECT * from pm where PM_Quantite<20";
+            require 'connexion.php';
+            $med=$_POST['RechercheMed'];
+            $requete_pm="SELECT * from pm where PM_TYPES like '".$med."%' ";
             $query_pm=mysqli_query($con,$requete_pm);
 
             while($rows=mysqli_fetch_assoc($query_pm)){
                 //for delete
-                    $id=$rows['PM_TYPES'];
+                    $id=$rows['id'];
                 //**** */
                 echo "<tr>";
                     echo "<td>".$rows['PM_TYPES']."</td>";
@@ -222,13 +230,14 @@
             </tr>
         </thead>
         <?php
-           include('connexion.php');
-            $requete_autre_materiels="SELECT * from autre_materiels where AUTRE_TYPES_Quantite<20";
+            require 'connexion.php';
+            $med=$_POST['RechercheMed'];
+            $requete_autre_materiels="SELECT * from autre_materiels where AUTRE_TYPES like '".$med."%'";
             $query_autre_materiels=mysqli_query($con,$requete_autre_materiels);
 
             while($rows=mysqli_fetch_assoc($query_autre_materiels)){
                 //for delete
-                    $id=$rows['AUTRE_TYPES'];
+                    $id=$rows['id'];
                 //**** */
                 echo "<tr>";
                     echo "<td>".$rows['AUTRE_TYPES']."</td>";

@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page des produits et contrôle de stock</title>
     <script src="https://kit.fontawesome.com/9c0bf29922.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            var scrollpos = localStorage.getItem('scrollpos');
+            if (scrollpos) window.scrollTo(0, scrollpos);
+        });
+
+        window.onbeforeunload = function(e) {
+            localStorage.setItem('scrollpos', window.scrollY);
+        };
+    </script>
+
 </head>
 <body>
     <div class="top_content">
@@ -14,6 +26,18 @@
         <a class="prod-20" href="alert.php"> <img class="icon" src="alert.png"> Produits de moins de 20</img></a>
     </div>
     <hr>
+
+
+    <!--Rechercher les médicaments-->
+    <form method="post" action="rechercheMed.php" style="margin:40px 0px 0px 32%; ">
+        <input type="text" size="70" name="RechercheMed" id="t" placeholder="Rechercher Médicament " style="padding: 10px 20px ;border:none; border-radius:20px; background-color:#e7e7ee" >
+         <button type="submit" id="p" style="border:none;margin-left:-40px; background-color:#e7e7ee;" ><i class="fa fa-search" style="font-size:15px"></i> </button>   
+    </form>
+    <br>
+
+
+
+
     <!-- sondes_5f TABLE -->
     <h1 class="type" id="t1">Sondes 5F</h1>
     <table class="content-table">
@@ -29,6 +53,7 @@
         </thead>
         <?php
             include('connexion.php');
+
             $requete_sondes_5f="SELECT * from sondes_5f";
             $query_sondes_5f=mysqli_query($con,$requete_sondes_5f);
 

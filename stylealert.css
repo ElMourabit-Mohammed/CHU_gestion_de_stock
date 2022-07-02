@@ -18,6 +18,20 @@
   }
 
 
+  a:link{
+    text-decoration: none;
+    color:#010605;
+  }
+
+  a:hover{
+    font-weight: bold;
+    color:#010605;
+  }
+
+  a:visited{
+    color:black;
+  }
+
   .content-table {
     width: 80%;
     border-collapse: collapse;
@@ -33,15 +47,27 @@
   .content-table thead tr {
     background-color: #e0090c;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
   }
   
   .content-table th,
   .content-table td {
     padding: 12px 15px;
+    text-align: center;
   }
   
+  .content-table th a{
+    color: #ffffff;
+    text-align:center;
+  }
+
+  .content-table th a:hover{
+    color: #e07979;
+    font-weight: bold;
+  }
+
+
   .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
   }
