@@ -8,7 +8,8 @@
 
     //pour l'execution
     $query=mysqli_query($con,$sql);
-    if(isset($query)){
+    if(isset($query) ){
         header("location:../aff.php");
     }
 ?>
+

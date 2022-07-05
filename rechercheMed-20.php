@@ -1,13 +1,22 @@
+<?php
+     session_start();  
+    if(!isset($_SESSION['monlogin'])) header('location: login.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- META -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE -->
     <title>Page des produits et contrôle de stock</title>
+    <!-- CSS -->
     <script src="https://kit.fontawesome.com/9c0bf29922.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Stylealert.css">
-
+    <link rel="stylesheet" href="./CSS/Style_alert.css">
+    <!-- SCRIPT OF REFRESH AND MAINTAIN THE PREVIOUS POSITION -->
     <script>
         document.addEventListener("DOMContentLoaded", function(event) { 
             var scrollpos = localStorage.getItem('scrollpos');
