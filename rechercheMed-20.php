@@ -30,7 +30,7 @@
     
 </head>
 <body>
-    <h1 class="top-title"> <a href="./alert.php"> <i class='fas fa-arrow-alt-circle-left'></i></a> Produits moins de 20 unitées</h1>
+    <h1 class="top-title"> <a href="./alert.php"> <i class='fas fa-arrow-alt-circle-left'></i></a> Produits moins de 20 unités</h1>
     <hr>
     <hr>
 

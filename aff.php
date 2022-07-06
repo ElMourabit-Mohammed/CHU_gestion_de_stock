@@ -32,10 +32,10 @@
     <div class="top_content">
         <div class="title">
             <h1>Page des produits et contrôle de stock</h1>
-            <a class="prod-20" href="alert.php"> <img class="icon" src="./Images/alert.png"> Produits de moins de 20</img></a>
+            <a class="prod-20" href="alert.php"> <img class="icon" src="./Images/alert.png"> Produits moins de 20 unités</img></a>
         </div>
         <div class="logout">
-            <a class="logout-anchor" href="./logout.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
+            <a class="logout-anchor" href="./logout.php"><i class="fas fa-power-off mr-2"></i>Déconnexion</a>
         </div>
     </div>
 

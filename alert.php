@@ -32,7 +32,7 @@
 </head>
 <body>
 
-    <h1 class="top-title"> <a href="./aff.php"> <i class='fas fa-arrow-alt-circle-left'></i></a> Produits moins de 20 unitées</h1><hr>
+    <h1 class="top-title"> <a href="./aff.php"> <i class='fas fa-arrow-alt-circle-left'></i></a> Produits moins de 20 unités</h1><hr>
 
     <!--Rechercher les médicaments-->
     <form method="post" action="rechercheMed-20.php" style="margin:40px 0px 0px 32%; ">

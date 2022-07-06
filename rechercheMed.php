@@ -34,7 +34,7 @@
 <body>
     <div class="top_content">
         <h1>  <a href="./aff.php"> <i class='fas fa-arrow-alt-circle-left'></i> Page des produits et contrôle de stock</h1>
-        <a class="prod-20" href="alert.php"> <img class="icon" src="alert.png"> Produits de moins de 20</img></a>
+        <a class="prod-20" href="alert.php"> <img class="icon" src="./Images/alert.png"> Produits de moins de 20</img></a>
     </div>
     <hr>
     <hr>
